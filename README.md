@@ -1,1 +1,0 @@
-# kinyang-app
