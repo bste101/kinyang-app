@@ -1,7 +1,14 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 
 const Navbar = (): JSX.Element => {
+
+  const [isClick, setisClick] = useState(false);
+
+  const toggleNavbar = (): void => {
+    setisClick(!isClick)
+  }
   return (
     <>
       <nav className="bg-black">
@@ -12,17 +19,22 @@ const Navbar = (): JSX.Element => {
                 Logo
               </a>
             </div>
-          </div>
-          <div className="hidden md:block">
+            <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
               <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
                 Home
               </Link>
-              <Link href="/about" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                About Us
+              <Link href="/random" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                Random
               </Link>
-              {/* Add more menu items as needed */}
+              <Link href="/menu" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                Menu
+              </Link>
+              <Link href="/aboutus" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                About us
+              </Link>
             </div>
+          </div>
           </div>
         </div>
       </nav>
