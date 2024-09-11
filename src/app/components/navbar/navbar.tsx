@@ -1,41 +1,29 @@
-"use client";
-import { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
 const Navbar = (): JSX.Element => {
-
-  const [isClick, setisClick] = useState(false);
-
-  const toggleNavbar = (): void => {
-    setisClick(!isClick)
-  }
   return (
     <>
-      <nav className="bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex-shrink-0">
-              <a href="/" className="text-white">
-                Logo
-              </a>
-            </div>
-            <div className="hidden md:block">
-            <div className="ml-4 flex items-center space-x-4">
-              <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                Home
-              </Link>
-              <Link href="/random" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                Random
-              </Link>
-              <Link href="/menu" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                Menu
-              </Link>
-              <Link href="/aboutus" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                About us
-              </Link>
-            </div>
+      <nav className="bg-green-600 p-4 mb-6 flex items-center">
+        <div className="flex items-center">
+          <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mr-2">
+            <span className="text-white text-xs">KINYANG</span>
           </div>
-          </div>
+        </div>
+        <div className="flex items-center ml-auto space-x-5">
+          <a href="#" className="text-white">
+            Home
+          </a>
+          <a href="#" className="text-white">
+            Random
+          </a>
+          <a href="#" className="text-white underline">
+            Menu
+          </a>
+          <a href="#" className="text-white">
+            About Us
+          </a>
+          <div className="w-10 h-10 bg-pink-300 rounded-full"></div>
         </div>
       </nav>
     </>
